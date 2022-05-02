@@ -1,3 +1,27 @@
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT Sans/PTSans-Regular") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT Sans/PTSans-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT Sans/PTSans-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PT Sans/PTSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
 /*normalize*/
 html {
   line-height: 1.15;
@@ -173,18 +197,10 @@ template {
 [hidden] {
   display: none;
 }
+
 /*normalize end*/
-
 /*functions*/
-@function stripUnit($value) {
-  @return $value / ($value * 0 + 1);
-}
-@function rem($pxValue) {
-  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
-}
 /*functions end*/
-
-
 html {
   font-size: 16px;
 }
@@ -195,14 +211,13 @@ html {
   text-decoration: none;
 }
 
-
 ul, li {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-h1,h2,h3,h4,h5 {
+h1, h2, h3, h4, h5 {
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
   margin: 0;
@@ -234,7 +249,6 @@ a {
   left: 0;
 }
 
-
 .container {
   max-width: 1170px;
   display: flex;
@@ -243,23 +257,146 @@ a {
   margin: 0 auto;
 }
 
-@media (max-width: 768px) {
- 
-}
-
-
-
 .logo.switch img:first-child {
   display: block;
 }
+
 .logo.switch img:last-child {
   display: none;
 }
+
 @media (max-width: 768px) {
   .logo.switch img:first-child {
     display: none;
   }
+
   .logo.switch img:last-child {
     display: block;
+  }
+}
+.button {
+  background: #313131;
+  border-radius: 7px;
+  color: #fff;
+  padding: 23px 12px;
+  min-width: 260px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.32px;
+  font-size: 18px;
+}
+
+.auth {
+  width: 100%;
+  height: 100%;
+  background: url("../img/auth/background.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth .logo {
+  margin-bottom: 40px;
+}
+
+.auth__panel {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  min-width: 420px;
+  max-width: 600px;
+}
+
+.auth__panel-title {
+  font-weight: 700;
+  font-size: 30px;
+  color: #313131;
+  margin-bottom: 20px;
+}
+
+.auth__panel-subtitle {
+  font-size: 20px;
+  color: #474747;
+  margin-bottom: 40px;
+}
+
+.auth__panel-input {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 36px;
+  border-bottom: 1px solid #313131;
+  font-size: 36px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.auth__panel-input::placeholder {
+  color: #BBB9B9;
+}
+
+.auth__panel-check {
+  margin-top: 20px;
+  display: flex;
+}
+
+.auth__panel-checkbox {
+  margin-right: 10px;
+}
+
+.auth__panel-terms {
+  color: #474747;
+}
+
+.auth__panel-terms a {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth {
+    background: #fff;
+  }
+
+  .auth .logo {
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .auth__panel {
+    width: 100%;
+    min-width: 0;
+    height: unset;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 32px 32px;
+  }
+
+  .auth__panel-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+
+  .auth__panel-subtitle {
+    font-size: 16px;
+    margin-bottom: 28px;
+  }
+
+  .auth__panel-input {
+    font-size: 28px;
+  }
+
+  .auth__panel-check {
+    width: 110%;
+    justify-content: center;
   }
 }
