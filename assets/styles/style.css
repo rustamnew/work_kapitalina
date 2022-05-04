@@ -222,6 +222,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  color: #313131;
 }
 
 h3 {
@@ -234,6 +235,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a {
@@ -254,7 +256,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+  padding: 0 80px;
 }
 
 .logo.switch img:first-child {
@@ -297,7 +299,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  padding-top: 100px;
 }
 
 .auth .logo {
@@ -328,6 +330,10 @@ a {
   font-size: 20px;
   color: #474747;
   margin-bottom: 40px;
+  text-align: center;
+}
+.auth__panel-subtitle b {
+  white-space: nowrap;
 }
 
 .auth__panel-input {
@@ -365,6 +371,7 @@ a {
 @media (max-width: 768px) {
   .auth {
     background: #fff;
+    padding-top: 0;
   }
 
   .auth .logo {
