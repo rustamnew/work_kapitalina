@@ -1,24 +1,28 @@
 .step {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
 }
 
 
 
 .step__sidebar {
-    width: 22%;
-    min-width: 280px;
+    width: 103%;
     background-image: url(../img/step/step_sidebar_background.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     padding: 50px;
-
-
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    grid-area: 1 / 1 / 12 / 2;
+    max-height: 100vh;
+    z-index: 10;
 }
 
 .step__progress {
@@ -96,9 +100,8 @@
 
 
 .step__main {
-    width: 78%;
-    height: 100vh;
     overflow-y: scroll;
+    grid-area: 2 / 2 / 12 / 12;
 }
 
 .step__content {
@@ -114,6 +117,7 @@
     font-size: 30px;
     margin-bottom: 60px;
 }
+
 .step__inputs {
     display: flex;
     flex-wrap: wrap;
@@ -139,6 +143,7 @@
 }
 .step__inputs li.step__radio {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     color: $inputgray;
@@ -243,6 +248,7 @@ input[type=date].step__input::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     padding: 33px 80px;
     background-color: #FAFAFA;
+    z-index: 5;
 }
 
 .step__back {
@@ -431,5 +437,47 @@ $primary-color-orange-dark: #e08833;
     .step__sidebar {
         display: none;
     }
+    .step__main {
+        width: 100%;
+        padding-top: 40px;
+        grid-area: 2 / 1 / 12 / 12;
+    }
+    .step__section h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    .step__inputs li {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .step__inputs li.step__contacts{
+        width: 100%;
+    }
+    .step__inputs li.step__radio {
+        color: $darkgray;
+    }
+    .step__inputs li.step__radio span {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .step__inputs .step__terms {
+        align-items: flex-start;
+    }
+    .step__input {
+        padding: 20px 0;
+    }
+    .step__inputs .step__terms .step__input {
+        margin-top: 5px;
+        margin-right: 7px;
+    }
+    .step__controls {
+        background-color: #FFF;
+        padding: 50px 0 40px;
+        flex-direction: column-reverse;
+    }
+    .step__back {
+        margin-top: 16px;
+    }
+    
 }
 

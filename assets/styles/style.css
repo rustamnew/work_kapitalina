@@ -237,10 +237,6 @@ h1, h2, h3, h4, h5 {
   color: #313131;
 }
 
-h3 {
-  text-transform: uppercase;
-}
-
 body {
   font-family: 'PT Sans', sans-serif;
   line-height: 1.5;
@@ -268,6 +264,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
   padding: 0 80px;
 }
 
@@ -285,6 +282,10 @@ a {
   }
 }
 @media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .logo.switch img:first-child {
     display: none;
   }
@@ -426,14 +427,26 @@ a {
 }
 .header {
   padding-top: 45px;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   margin-bottom: 40px;
+  grid-area: 1 / 2 / 2 / 12;
+}
+
+.header__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  display: none;
 }
 
 .header__menu {
   display: flex;
+  align-items: center;
 }
 
 .header__menu li {
@@ -451,6 +464,7 @@ a {
 .header__account {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 .header__account-name {
@@ -463,15 +477,69 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 20px;
+  width: 20px;
 }
 
+.header__account-logout svg {
+  fill: #F98600;
+}
+
+@media (max-width: 768px) {
+  .header {
+    background-image: url(../img/header/header_backgroud.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-area: 1 / 1 / 2 / 12;
+    height: 90px;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+
+  .header .container {
+    height: 100%;
+  }
+
+  .header .logo {
+    display: block;
+    height: 60%;
+  }
+
+  .header .logo img {
+    height: 100%;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__account-name {
+    color: #fff;
+    margin-right: 16px;
+    text-align: right;
+  }
+
+  .header__account-logout {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__account-logout svg {
+    fill: #fff;
+  }
+}
 .step {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: repeat(11, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100%;
 }
 
 .step__sidebar {
-  width: 22%;
-  min-width: 280px;
+  width: 103%;
   background-image: url(../img/step/step_sidebar_background.png);
   background-size: cover;
   background-position: center center;
@@ -481,6 +549,9 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  grid-area: 1 / 1 / 12 / 2;
+  max-height: 100vh;
+  z-index: 10;
 }
 
 .step__progress {
@@ -545,9 +616,8 @@ a {
 }
 
 .step__main {
-  width: 78%;
-  height: 100vh;
   overflow-y: scroll;
+  grid-area: 2 / 2 / 12 / 12;
 }
 
 .step__content {
@@ -588,6 +658,7 @@ a {
 
 .step__inputs li.step__radio {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
   color: #ABABAB;
@@ -685,6 +756,7 @@ input[type=date].step__input::-webkit-calendar-picker-indicator {
   justify-content: space-between;
   padding: 33px 80px;
   background-color: #FAFAFA;
+  z-index: 5;
 }
 
 .step__back {
@@ -1508,5 +1580,57 @@ $primary-color-orange-dark: #e08833;
 @media (max-width: 768px) {
   .step__sidebar {
     display: none;
+  }
+
+  .step__main {
+    width: 100%;
+    padding-top: 40px;
+    grid-area: 2 / 1 / 12 / 12;
+  }
+
+  .step__section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .step__inputs li {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .step__inputs li.step__contacts {
+    width: 100%;
+  }
+
+  .step__inputs li.step__radio {
+    color: #313131;
+  }
+
+  .step__inputs li.step__radio span {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .step__inputs .step__terms {
+    align-items: flex-start;
+  }
+
+  .step__input {
+    padding: 20px 0;
+  }
+
+  .step__inputs .step__terms .step__input {
+    margin-top: 5px;
+    margin-right: 7px;
+  }
+
+  .step__controls {
+    background-color: #FFF;
+    padding: 50px 0 40px;
+    flex-direction: column-reverse;
+  }
+
+  .step__back {
+    margin-top: 16px;
   }
 }

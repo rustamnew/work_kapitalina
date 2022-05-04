@@ -1,13 +1,25 @@
 .header {
     padding-top: 45px;
-    display: flex;
-    justify-content: space-between;
     width: 100%;
     margin-bottom: 40px;
+
+    grid-area: 1 / 2 / 2 / 12;
+}
+
+.header__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .logo {
+    display: none;
 }
 
 .header__menu {
     display: flex;
+    align-items: center;
 }
 
 .header__menu li {
@@ -28,6 +40,7 @@
 .header__account {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 .header__account-name {
     margin-right: 32px;
@@ -39,4 +52,51 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 20px;
+    width: 20px; 
+}
+
+.header__account-logout svg {
+    fill: $orange;
+}
+@media (max-width: 768px) {
+    .header {
+        background-image: url(../img/header/header_backgroud.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        grid-area: 1 / 1 / 2 / 12;
+
+        height: 90px;
+
+        padding-top: 0;
+        margin-bottom: 0;
+    }
+
+    .header .container {
+        height: 100%;
+    }
+    .header .logo {
+        display: block;
+        height: 60%;
+    }
+    .header .logo img{
+        height: 100%;
+    }
+    .header__menu {
+        display: none;
+    }
+    .header__account-name {
+        color: #fff;
+        margin-right: 16px;
+        text-align: right;
+    }
+    .header__account-logout {
+        width: 24px;
+        height: 24px;
+    }
+    .header__account-logout svg {
+        fill: #fff;
+    }
 }
