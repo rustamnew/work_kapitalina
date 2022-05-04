@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step1
+    </title>
+    
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="step">
+    <!--Sidebar-->
+    <div class="step__sidebar">
+
+        <!--Кружок с плагина-->
+        <div class="step__circle c100 big p25"><!--Тут указывать процент закраски кружка (p25)-->
+            <div class="info">
+                <span>25%</span>
+                <span>вероятность одобрения</span>
+            </div>
+
+            
+            <div class="slice">
+                <div class="bar"></div>
+                <div class="fill"></div>
+            </div>
+        </div>
+        <!--Конец кружка-->
+        
+        <div class="step__progress">
+            <ul class="step__progress-list">
+                <li class="step__progress-item active">
+                    <div>1</div>
+                    <span>Данные</span>
+                </li>
+                <li class="step__progress-item">
+                    <div>2</div>
+                    <span>Заработок</span>
+                </li>
+                <li class="step__progress-item">
+                    <div>3</div>
+                    <span>Контакты</span>
+                </li>
+                <li class="step__progress-item">
+                    <div>4</div>
+                    <span>Фотография</span>
+                </li>
+                <li class="step__progress-item">
+                    <div>5</div>
+                    <span>Подтверждение</span>
+                </li>
+            </ul>
+        </div>
+
+        <a href="#" class="logo">
+            <img src="../assets/img/logo-white.svg" alt="logo">
+        </a>
+    </div>
+    <!--Sidebar end-->
+
+
+    <!--Содержимое страницы-->
+    <div class="step__main">
+        <div class="container">
+
+            <!--Header-->
+            <header class="header">
+                <ul class="header__menu">
+                    <li>
+                        <a href="#">Займы</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">Анкета</a>
+                    </li>
+                    <li>
+                        <a href="#">Кредитный рейтинг</a>
+                    </li>
+                </ul>
+
+                <div class="header__account">
+                    <a href="#" class="header__account-name">Василий Ковалёв</a>
+                    <a href="#" class="header__account-logout">
+                        <img src="../assets/img/icons/logout.svg" alt="logout">
+                    </a>
+                </div>
+            </header>
+            <!--Header End-->
+
+
+            <div class="step__content">
+                <section class="step__section">
+                    <h3>Основные данные</h3>
+    
+                    <ul class="step__inputs">
+                        <li>
+                            <input type="text" id="surname" name="surname" class="step__input" placeholder="Фамилия" required>
+                            <label for="surname">Ваша фамилия</label>
+                        </li>
+                        <li>
+                            <input type="text" id="name" name="name" class="step__input" placeholder="Имя" required>
+                            <label for="name">Ваше имя</label>
+                        </li>
+                        <li>
+                            <input type="text" id="patronymic" name="patronymic" class="step__input" placeholder="Отчество" required>
+                            <label for="patronymic">Ваше отчество</label>
+                        </li>
+                        <li class="date">
+                            <input type="date" id="birth-date" name="birth-date" class="step__input" value="" placeholder="Дата рождения" required>
+                            <label for="birth-date">Ваша дата рождения</label>
+                        </li>
+                        <li class="step__radio">
+                            <span>Пол:</span>
+
+                            <input type="radio" id="male" name="gender" value="male">
+                            <label for="male">М</label>
+                        
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female">Ж</label>
+                        </li>
+                        <li>
+                            <input type="text" id="birth-place" name="birth-place" class="step__input" placeholder="Место рождения" required>
+                            <label for="birth-place">Ваше место рождения</label>
+                        </li>
+                    </ul>
+                </section>
+    
+                <section class="step__section">
+                    <h3>Паспорт</h3>
+    
+                    <ul class="step__inputs">
+                        <li>
+                            <input type="text" id="passport-series-number" name="passport-series-number" class="step__input" placeholder="Серия и номер" required>
+                            <label for="passport-series-number">Серия и номер</label>
+                        </li>
+                        <li>
+                            <input type="text" id="passport-code" name="passport-code" class="step__input" placeholder="Код подразделения" required>
+                            <label for="passport-code">Код подразделения</label>
+                        </li>
+                        <li>
+                            <input type="date" id="passport-date" name="passport-date" class="step__input" placeholder="Дата выдачи" required>
+                            <label for="passport-date">Дата выдачи</label>
+                        </li>
+                        <li class="wide">
+                            <input type="text" id="passport-issued" name="passport-issued" class="step__input" placeholder="Кем выдан" required>
+                            <label for="passport-issued">Кем выдан</label>
+                        </li>
+                    </ul>
+                </section>
+    
+                <section class="step__section">
+                    <h3>Контактные данные</h3>
+    
+                    <ul class="step__inputs">
+                        <li class="step__contacts">
+                            <input type="email" id="email" name="email" class="step__input" placeholder="E-mail" required>
+                            <label for="email">E-mail</label>
+                        </li>
+                        <li class="step__contacts">
+                            <input type="text" id="phone" name="phone" class="step__input" placeholder="Телефон" required>
+                            <label for="phone">E-mail</label>
+                        </li>
+                    </ul>
+                </section>
+    
+                <section class="step__section">
+                    <h3>Соглашение</h3>
+    
+                    <ul class="step__inputs">
+                        <li class="step__terms">
+                            <input type="checkbox" id="personal-info" name="personal-info" class="step__input" required>
+                            <label for="email">Настоящим подтверждаю, что ознакомлен с <a href="#">Согласием на обработку персональных данных</a></label>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+
+        </div>
+
+        <div class="step__controls">
+            <a href="#" class="step__back">
+                <img src="../assets/img/icons/arrow_left.svg" alt="back">
+                <span>На главную</span>
+            </a>
+
+            <a href="#" class="button">
+                далее
+            </a>
+        </div>
+
+
+    </div>
+    <!--Конец содержимого страницы-->
+</div>
+
+</div>
+
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

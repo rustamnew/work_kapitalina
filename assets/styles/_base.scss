@@ -175,6 +175,11 @@ template {
 }
 /*normalize end*/
 
+/*circles*/
+.mkc_circle { animation: mck_progress 1000ms ease-in-out; }
+@keyframes mck_progress { 0% { stroke-dasharray: 0, 100; }}
+/*circles end*/
+
 /*functions*/
 @function stripUnit($value) {
   @return $value / ($value * 0 + 1);
@@ -207,6 +212,7 @@ h1,h2,h3,h4,h5 {
   font-weight: 700;
   margin: 0;
   padding: 0;
+  color: $darkgray;
 }
 
 h3 {
@@ -219,6 +225,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 a {
@@ -240,12 +247,10 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 auto;
+
+  padding: 0 80px;
 }
 
-@media (max-width: 768px) {
- 
-}
 
 
 
@@ -255,6 +260,14 @@ a {
 .logo.switch img:last-child {
   display: none;
 }
+
+
+@media (max-width: 1110px) {
+  .container {
+    padding: 0 60px;  
+  }
+}
+
 @media (max-width: 768px) {
   .logo.switch img:first-child {
     display: none;
