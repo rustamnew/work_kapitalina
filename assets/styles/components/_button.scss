@@ -1,14 +1,27 @@
 .button {
-    background: #313131;
+    background: $darkgray;
     border-radius: 7px;
     color: #fff;
     padding: 23px 12px;
     min-width: 260px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    width: max-content;
     text-transform: uppercase;
+    text-align: center;
     font-weight: 700;
     letter-spacing: 0.32px;
     font-size: 18px;
+    box-sizing: border-box;
+}
+
+.button.wide {
+    width: 100%;
+}
+.button.short {
+    min-width: 0;
+    padding: 24px 31px;
+}
+
+.button.orange {
+    background-color: $orange;
 }

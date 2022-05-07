@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Step1</title>
+    <title>Step3</title>
     
     <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
@@ -38,11 +38,11 @@
                     <div>1</div>
                     <span>Данные</span>
                 </li>
-                <li class="step__progress-item">
+                <li class="step__progress-item active">
                     <div>2</div>
                     <span>Заработок</span>
                 </li>
-                <li class="step__progress-item">
+                <li class="step__progress-item active">
                     <div>3</div>
                     <span>Контакты</span>
                 </li>
@@ -114,95 +114,97 @@
     <!--Содержимое страницы-->
     <div class="step__main">
         <div class="container">
-
             <div class="step__content">
                 <section class="step__section">
-                    <h3>Основные данные</h3>
+                    <h3>Сфера деятельности</h3>
     
                     <ul class="step__inputs">
-                        <li>
-                            <input type="text" id="surname" name="surname" class="step__input" placeholder="Фамилия" required>
-                            <label for="surname">Ваша фамилия</label>
-                        </li>
-                        <li>
-                            <input type="text" id="name" name="name" class="step__input" placeholder="Имя" required>
-                            <label for="name">Ваше имя</label>
-                        </li>
-                        <li>
-                            <input type="text" id="patronymic" name="patronymic" class="step__input" placeholder="Отчество" required>
-                            <label for="patronymic">Ваше отчество</label>
-                        </li>
-                        <li class="date">
-                            <input type="date" id="birth-date" name="birth-date" class="step__input" value="" placeholder="Дата рождения" required>
-                            <label for="birth-date">Ваша дата рождения</label>
-                        </li>
-                        <li class="step__radio">
-                            <span>Пол:</span>
 
-                            <ul>
-                                <li>
-                                    <input type="radio" id="male" name="gender" value="male">
-                                    <label for="male">М</label>
-                                </li>
-                                <li>
-                                    <input type="radio" id="female" name="gender" value="female">
-                                    <label for="female">Ж</label>
-                                </li>
-                            </ul>
+                        <li class="solo">
+                            <input type="text" id="employment" name="employment" class="step__input" placeholder="Должность" required>
+                            <label for="employment">Занятость</label>
+                        </li>
 
+                        <li class="solo">
+                            <input type="text" id="organization" name="organization" class="step__input" placeholder="Наименование организации" required>
+                            <label for="organization">Наименование организации</label>
                         </li>
-                        <li>
-                            <input type="text" id="birth-place" name="birth-place" class="step__input" placeholder="Место рождения" required>
-                            <label for="birth-place">Ваше место рождения</label>
+
+                        <li class="solo">
+                            <input type="text" id="position" name="position" class="step__input" placeholder="Название должности" required>
+                            <label for="position">Название должности</label>
                         </li>
+
                     </ul>
                 </section>
     
                 <section class="step__section">
-                    <h3>Паспорт</h3>
+                    <h3>Данные о сфере деятельности</h3>
     
                     <ul class="step__inputs">
-                        <li>
-                            <input type="text" id="passport-series-number" name="passport-series-number" class="step__input" placeholder="Серия и номер" required>
-                            <label for="passport-series-number">Серия и номер</label>
+                        <li class="solo">
+                            <input type="text" id="income" name="income" class="step__input" placeholder="Ежемесячный доход" required>
+                            <label for="income">Ежемесячный доход</label>
                         </li>
-                        <li>
-                            <input type="text" id="passport-code" name="passport-code" class="step__input" placeholder="Код подразделения" required>
-                            <label for="passport-code">Код подразделения</label>
-                        </li>
-                        <li>
-                            <input type="date" id="passport-date" name="passport-date" class="step__input" placeholder="Дата выдачи" required>
-                            <label for="passport-date">Дата выдачи</label>
-                        </li>
-                        <li class="wide">
-                            <input type="text" id="passport-issued" name="passport-issued" class="step__input" placeholder="Кем выдан" required>
-                            <label for="passport-issued">Кем выдан</label>
+                        <li class="solo">
+                            <input type="text" id="work-phone" name="work-phone" class="step__input" placeholder="Рабочий телефон" required>
+                            <label for="work-phone">Рабочий телефон, добавочный</label>
                         </li>
                     </ul>
                 </section>
     
                 <section class="step__section">
-                    <h3>Контактные данные</h3>
-    
-                    <ul class="step__inputs">
-                        <li class="step__contacts">
-                            <input type="email" id="email" name="email" class="step__input" placeholder="E-mail" required>
-                            <label for="email">E-mail</label>
-                        </li>
-                        <li class="step__contacts">
-                            <input type="text" id="phone" name="phone" class="step__input" placeholder="Телефон" required>
-                            <label for="phone">Телефон</label>
-                        </li>
-                    </ul>
-                </section>
-    
-                <section class="step__section">
-                    <h3>Соглашение</h3>
+                    <h3>Дополнительный доход</h3>
     
                     <ul class="step__inputs">
                         <li class="step__terms">
-                            <input type="checkbox" id="personal-info" name="personal-info" class="step__input" required>
-                            <label for="personal-info">Настоящим подтверждаю, что ознакомлен с <a href="#">Согласием на обработку персональных данных</a></label>
+                            <input type="checkbox" id="extra-income" name="extra-income" class="step__input">
+                            <label for="extra-income">У меня есть дополнительный доход</label>
+                        </li>
+                    </ul>
+                </section>
+                <section class="step__section">
+                    <h3>Адрес места работы</h3>
+    
+                    <ul class="step__inputs">
+                        <li class="solo">
+                            <select id="work-region" name="work-region" class="step__input select"  placeholder="Регион" >
+                                <option value="" selected disabled>Регион</option>
+                                <option value="tatarstan">Республика Татарстан</option>
+                                <option value="tatarstan">Республика Татарстан</option>
+                                <option value="tatarstan">Республика Татарстан</option>
+                                <option value="tatarstan">Республика Татарстан</option>
+                            </select>
+                            <label for="work-region">Регион</label>
+                        </li>
+                        <li class="solo">
+                            <input type="text" id="work-house" name="work-house" class="step__input" placeholder="Дом" >
+                            <label for="work-house">Дом</label>
+                        </li>
+
+                        <li class="solo">
+                            <input type="text" id="work-housing" name="work-housing" class="step__input" placeholder="Корпус">
+                            <label for="work-housing">Корпус</label>
+                        </li>
+
+                        <li class="solo">
+                            <input type="text" id="work-building" name="work-building" class="step__input" placeholder="Адрес организации">
+                            <label for="work-building">Строение</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="step__section">
+                    <h3>Контактная информация третьего лица</h3>
+    
+                    <ul class="step__inputs">
+                        <li class="step__contacts">
+                            <input type="text" id="third-person-name" name="third-person-name" class="step__input" placeholder="ФИО" required>
+                            <label for="third-person-name">ФИО</label>
+                        </li>
+                        <li class="step__contacts">
+                            <input type="text" id="third-person-phone" name="third-person-phone" class="step__input" placeholder="Телефон" required>
+                            <label for="third-person-phone">Телефон</label>
                         </li>
                     </ul>
                 </section>
@@ -214,7 +216,7 @@
         <div class="step__controls">
             <a href="#" class="step__back">
                 <img src="../assets/img/icons/arrow_left.svg" alt="back">
-                <span>На главную</span>
+                <span>Назад</span>
             </a>
 
             <a href="#" class="button">
