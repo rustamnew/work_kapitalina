@@ -1,6 +1,6 @@
 @font-face {
     font-family: "PT Sans"; 
-    src: url("../fonts/PT\ Sans/PTSans-Regular") format("truetype"); 
+    src: url("../fonts/PT\ Sans/PTSans-Regular.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 400; 
 } 
@@ -21,4 +21,17 @@
     src: url("../fonts/PT\ Sans/PTSans-Bold.ttf") format("truetype"); 
     font-style: normal; 
     font-weight: 700; 
+} 
+
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype"); 
+    font-style: normal;
+    font-weight: 400; 
+} 
+@font-face {
+    font-family: "Montserrat"; 
+    src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"); 
+    font-style: normal;
+    font-weight: 500; 
 } 
