@@ -29,11 +29,11 @@
     grid-area: 1 / 2 / 2 / 12;
 }
 
-.step__progress {
+.progress {
     width: 100%;
     //margin-bottom: 40px;
 }
-.step__progress-item {
+.progress__item {
     background-color: #FFF;
     border-radius: 50%;
     width: 50px;
@@ -63,7 +63,7 @@
 
 }
 
-.step__progress-item.active {
+.progress__item.active {
     background-color: $darkgray;
     box-shadow: none;
     color: #FFF;
@@ -74,7 +74,7 @@
     }
 }
 
-.step__progress-item div {
+.progress__item div {
     position: absolute;
     top: 0;
     right: 0;
@@ -88,7 +88,7 @@
     padding-bottom: 1px;
 }
 
-.step__progress-item span {
+.progress__item span {
     display: flex;
     align-items: center;
     justify-content: center;
