@@ -29,78 +29,7 @@
     grid-area: 1 / 2 / 2 / 12;
 }
 
-.progress {
-    width: 100%;
-    //margin-bottom: 40px;
-}
-.progress__item {
-    background-color: #FFF;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    position: relative;
-    z-index: 5;
 
-    display: flex;
-    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.6);
-
-    &:not(:first-child) {
-        margin-top: 50px;
-        &::before {
-            content: '';
-            height: 57px;
-            width: 10px;
-            background-color: #FFF;
-            position: absolute;
-            top: -55px;
-            right: 50%;
-            transform: translateX(50%);
-            z-index: 4;
-            
-        }
-    }
-
-
-}
-
-.progress__item.active {
-    background-color: $darkgray;
-    box-shadow: none;
-    color: #FFF;
-    z-index: 6;
-
-    &:not(:first-child)::before {
-        background-color: $darkgray;
-    }
-}
-
-.progress__item div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: 700;
-    padding-bottom: 1px;
-}
-
-.progress__item span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 80px;
-
-
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
-    font-size: 19px;
-    color: #FFFFFF;
-    font-weight: 400;
-
-}
 
 
 
