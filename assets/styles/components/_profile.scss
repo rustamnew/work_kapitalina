@@ -1,10 +1,8 @@
 .profile {
-    display: grid;
-    grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(11, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    position: relative;
     height: 100%;
+    overflow: auto;
+    display: flex;
 }
 
 .profile-edit {
@@ -96,10 +94,14 @@
 @media (max-width: 768px) {
     .profile {
         overflow: auto;
+        flex-direction: column;
     }
     .profile .header {
         grid-area: 1 / 1 / 2 / 12;
         background: transparent;
+
+        position: absolute;
+        top: 0;
     }
     .profile-edit {
         grid-area: 7 / 1 / 12 / 12;

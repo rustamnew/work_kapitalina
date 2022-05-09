@@ -8,6 +8,8 @@
     color: #FFF;
 
     padding: 45px;
+
+    width: 30%;
 }
 
 .sidebar__loan {
@@ -44,13 +46,18 @@
 @media (max-width: 1110px) {
     .sidebar {
         padding: 30px;
-        height: 102%;
     }
 }
 @media (max-width: 768px) {
     .sidebar {
         grid-area: 1 / 1 / 7 / 12;
-        padding-top: 90px;
+        padding: 90px 0 0;
+        width: 100%;
+
+    }
+
+    .sidebar .logo {
+        display: none;
     }
 }
 

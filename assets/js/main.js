@@ -52,18 +52,28 @@ if(stepPaymentButtonCard && stepPaymentButtonOffice) {
 
 
 /*  Открытие/Закрытие карты мобилка step5   */
-stepMapOpenButton = document.querySelector('.step__payment-mobile-map-button') 
-stepMapCloseButton = document.querySelector('.step__payment-info-office-close') 
+
+let stepPaymentControls = document.querySelector('.step__payment-controls')
+let stepMapOpenButton = document.querySelector('.step__payment-mobile-map-button') 
+let stepMapCloseButton = document.querySelector('.step__payment-info-office-close') 
+
+
 if(stepMapCloseButton && stepMapOpenButton) {
 	stepMapOpenButton.addEventListener('click', (e) => {
 		e.preventDefault();
 		stepPaymentInfoOffice.classList.add('active-mobile')
+		stepPaymentControls.classList.add('hide')
 	})
 	stepMapCloseButton.addEventListener('click', (e) => {
 		e.preventDefault();
 		stepPaymentInfoOffice.classList.remove('active-mobile')
+		stepPaymentControls.classList.remove('hide')
 	})
 }
+
+
+
+
 
 
 

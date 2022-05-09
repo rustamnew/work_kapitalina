@@ -70,3 +70,10 @@
     font-weight: 400;
 
 }
+
+
+@media (max-width: 768px) {
+    .progress {
+        display: none;
+    }
+}
