@@ -11,7 +11,7 @@
 
 .step__sidebar {
     width: 103%;
-    background-image: url(../img/step/step_sidebar_background.png);
+    background-image: url(../img/background.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -23,6 +23,10 @@
     grid-area: 1 / 1 / 12 / 2;
     max-height: 100vh;
     z-index: 10;
+}
+
+.step .header {
+    grid-area: 1 / 2 / 2 / 12;
 }
 
 .step__progress {
