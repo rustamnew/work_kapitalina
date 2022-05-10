@@ -2589,6 +2589,22 @@ select[data-ss-uuid] {
   text-decoration-line: underline;
 }
 
+.sidebar__vip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.sidebar__vip img {
+  margin-bottom: 18px;
+}
+
+.sidebar__vip span {
+  font-weight: 700;
+  font-size: 24px;
+}
+
 .sidebar__nav-mobile {
   display: none;
   position: absolute;
@@ -2627,6 +2643,10 @@ select[data-ss-uuid] {
   .sidebar__nav-mobile li.active {
     background: #FFFFFF;
     color: #F98600;
+  }
+
+  .sidebar__vip {
+    margin-bottom: 20px;
   }
 }
 @-webkit-keyframes rotating {
@@ -2691,6 +2711,11 @@ select[data-ss-uuid] {
   font-size: 24px;
 }
 
+@media (max-width: 768px) {
+  .timer {
+    margin-bottom: 40px;
+  }
+}
 .status {
   display: flex;
   justify-content: space-between;

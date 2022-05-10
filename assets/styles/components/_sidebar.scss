@@ -44,7 +44,19 @@
     margin-top: 15px;
     text-decoration-line: underline;
 }
-
+.sidebar__vip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+.sidebar__vip img {
+    margin-bottom: 18px;
+}
+.sidebar__vip span {
+    font-weight: 700;
+    font-size: 24px;
+}
 .sidebar__nav-mobile {
     display: none;
     position: absolute;
@@ -83,6 +95,9 @@
     .sidebar__nav-mobile li.active{
         background: #FFFFFF;
         color: $orange;
+    }
+    .sidebar__vip {
+        margin-bottom: 20px;
     }
 }
 
