@@ -2483,6 +2483,15 @@ select[data-ss-uuid] {
   font-size: 16px;
 }
 
+.profile .progress {
+  width: 80%;
+}
+
+@media (max-width: 1500px) {
+  .profile .progress {
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .profile {
     overflow: auto;
@@ -2545,6 +2554,7 @@ select[data-ss-uuid] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .sidebar__loan {
@@ -2579,6 +2589,13 @@ select[data-ss-uuid] {
   text-decoration-line: underline;
 }
 
+.sidebar__nav-mobile {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 @media (max-width: 1110px) {
   .sidebar {
     padding: 30px;
@@ -2594,6 +2611,22 @@ select[data-ss-uuid] {
 
   .sidebar .logo {
     display: none;
+  }
+
+  .sidebar__nav-mobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .sidebar__nav-mobile li {
+    padding: 8px 16.5px;
+    border-radius: 7px 7px 0px 0px;
+    white-space: nowrap;
+  }
+
+  .sidebar__nav-mobile li.active {
+    background: #FFFFFF;
+    color: #F98600;
   }
 }
 @-webkit-keyframes rotating {
@@ -2779,6 +2812,11 @@ select[data-ss-uuid] {
   .about__image-mobile {
     display: initial;
     margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .about__image-mobile img {
+    width: 100%;
   }
 
   .about__content {
@@ -2902,5 +2940,13 @@ select[data-ss-uuid] {
   .history__button {
     display: flex;
     margin-top: 20px;
+  }
+
+  .history__expand {
+    display: none;
+  }
+
+  .history__list {
+    max-height: unset;
   }
 }

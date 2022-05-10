@@ -62,6 +62,10 @@
     .about__image-mobile {
         display: initial;
         margin-bottom: 20px;
+        width: 100%;
+    }
+    .about__image-mobile img{
+        width: 100%;
     }
     .about__content {
         width: 100%;

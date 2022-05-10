@@ -88,8 +88,16 @@
     margin-left: auto;
     font-size: 16px;
 }
+.profile .progress {
+    width: 80%;
+}
 
 
+@media (max-width: 1500px) {
+    .profile .progress {
+        width: 100%;
+    }
+}
 
 @media (max-width: 768px) {
     .profile {
@@ -106,6 +114,7 @@
         position: absolute;
         top: 0;
     }
+
     .profile-edit {
         grid-area: 7 / 1 / 12 / 12;
     }

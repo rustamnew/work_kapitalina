@@ -101,4 +101,10 @@
         display: flex;
         margin-top: 20px;
     }
+    .history__expand {
+        display: none;
+    }
+    .history__list {
+        max-height: unset;
+    }
 }

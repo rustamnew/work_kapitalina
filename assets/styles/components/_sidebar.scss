@@ -9,6 +9,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    position: relative;
 }
 
 .sidebar__loan {
@@ -43,6 +45,12 @@
     text-decoration-line: underline;
 }
 
+.sidebar__nav-mobile {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 @media (max-width: 1110px) {
     .sidebar {
@@ -60,6 +68,21 @@
 
     .sidebar .logo {
         display: none;
+    }
+    .sidebar__nav-mobile {
+        display: flex;
+        justify-content: center;
+        
+    }
+    .sidebar__nav-mobile li{
+        padding: 8px 16.5px;
+        border-radius: 7px 7px 0px 0px;
+        white-space: nowrap;
+
+    }
+    .sidebar__nav-mobile li.active{
+        background: #FFFFFF;
+        color: $orange;
     }
 }
 
