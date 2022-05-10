@@ -1,0 +1,70 @@
+.status {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 32px;
+
+    border: 1px solid $orange;
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+.status__title {
+    font-weight: 700;
+    font-size: 30px;
+    border-bottom: 1px solid $lightgray;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.status__value {
+    font-weight: 700;
+    font-size: 48px;
+    text-align: right;
+}
+.status__value-subtitle {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+
+.status.processed .status__title span{
+    color: $green;
+}
+.status.rejected .status__title span,
+.status.rejected .status__value,
+.status.rejected .status__value-subtitle {
+    color: $orange;
+}
+.status.approved .status__title span,
+.status.approved .status__value {
+    color: $green;
+}
+
+
+@media (max-width: 768px) {
+    .status {
+        margin-top: 30px;
+
+        flex-direction: column;
+    }
+
+    .status__title {
+        font-size: 24px;
+    }
+
+    .status__number {
+        font-size: 18px;
+    }
+    .status__value {
+        text-align: left;
+    }
+}

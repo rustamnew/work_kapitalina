@@ -1,21 +1,21 @@
 .sidebar {
-    grid-area: 1 / 1 / 12 / 4;
-
     background-image: url(../img/background.png);
     background-repeat: no-repeat;
     background-size: cover;
-
     color: #FFF;
-
     padding: 45px;
 
-    width: 30%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sidebar__loan {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .sidebar__loan-sum {
@@ -43,15 +43,17 @@
     text-decoration-line: underline;
 }
 
+
 @media (max-width: 1110px) {
     .sidebar {
         padding: 30px;
+        width: 42%;
     }
 }
 @media (max-width: 768px) {
     .sidebar {
         grid-area: 1 / 1 / 7 / 12;
-        padding: 90px 0 0;
+        padding: 90px 32px 40px;
         width: 100%;
 
     }

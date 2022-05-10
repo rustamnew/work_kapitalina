@@ -74,6 +74,24 @@ if(stepMapCloseButton && stepMapOpenButton) {
 
 
 
+/* Открытие истории заявок profile-status(1-3) */
+let historyExpandButton = document.querySelector('.history__expand');
+
+if(historyExpandButton) {
+	historyExpandButton.addEventListener("click", (e) => {
+		e.target.classList.toggle("active");
+		let content = e.target.nextElementSibling;
+
+		if (content.style.maxHeight){
+		content.style.maxHeight = null;
+		} else {
+		content.style.maxHeight = content.scrollHeight + "px";
+		} 
+	});
+}
+
+
+
 
 
 
