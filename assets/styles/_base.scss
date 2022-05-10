@@ -227,6 +227,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  color: $darkgray;
 }
 
 a {
@@ -258,6 +259,7 @@ a {
 
 .page-content {
   width: 100%;
+  overflow: auto;
 }
 
 
