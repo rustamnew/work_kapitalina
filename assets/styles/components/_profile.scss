@@ -96,6 +96,9 @@
         overflow: auto;
         flex-direction: column;
     }
+    .profile .page-content{
+        overflow: initial;
+    }
     .profile .header {
         grid-area: 1 / 1 / 2 / 12;
         background: transparent;
