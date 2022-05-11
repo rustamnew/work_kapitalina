@@ -52,6 +52,14 @@
     display: none;
 }
 
+.about.unavailable {
+    background-color: #66BAAB;
+
+    .about__title {
+        color: $darkgray;
+    }
+}
+
 
 @media (max-width: 768px) {
     .about {
@@ -78,8 +86,7 @@
     }
 
     .about__title {
-        line-height: 39px;
-        font-size: 30px;
+
         text-align: center;
         margin-bottom: 20px;
     }

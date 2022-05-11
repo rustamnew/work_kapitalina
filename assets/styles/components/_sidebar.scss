@@ -18,6 +18,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .sidebar__loan-sum {
@@ -63,6 +64,22 @@
     bottom: 0;
     width: 100%;
 }
+.sidebar__no-loan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+
+    img {
+        width: 80px;
+        margin-bottom: 26px;
+    }
+
+    span {
+        font-weight: 700;
+        font-size: 24px;
+    }
+}
 
 @media (max-width: 1110px) {
     .sidebar {
@@ -73,11 +90,22 @@
 @media (max-width: 768px) {
     .sidebar {
         grid-area: 1 / 1 / 7 / 12;
-        padding: 90px 32px 40px;
+        padding: 90px 32px 50px;
         width: 100%;
 
     }
-
+    .sidebar__no-loan {
+        margin-bottom: 20px;
+        img {
+            width: 61px;
+            margin-bottom: 20px;
+        }
+    
+        span {
+            font-weight: 400;
+            font-size: 20px;
+        }
+    }
     .sidebar .logo {
         display: none;
     }
