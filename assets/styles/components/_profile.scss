@@ -17,6 +17,11 @@
 .profile__content {
     width: 100%;
 }
+.profile__content > h3 {
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
 
 .profile__section h3 {
     font-weight: 700;
@@ -120,6 +125,12 @@
     }
     .profile__content {
         margin-bottom: 40px;
+        margin-top: 26px;
+    }
+    .profile__content > h3 {
+        margin-top: 30px;
+        
+    
     }
     .profile__section h3 {
         font-size: 22px;

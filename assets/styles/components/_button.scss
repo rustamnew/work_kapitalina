@@ -26,3 +26,8 @@
 .button.orange {
     background-color: $orange;
 }
+.button.orange-light {
+    border: 2px solid $orange;
+    background-color: #FFF;
+    color: $orange;
+}

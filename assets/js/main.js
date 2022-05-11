@@ -96,6 +96,32 @@ if(historyExpandButton) {
 
 
 
+/* Открытие детальной информации о займе profile-loans */
+
+loanOpenButtons = document.querySelectorAll('.loan__item');
+loanCloseButtons = document.querySelectorAll('.loan__detail-close');
+
+
+loanOpenButtons.forEach((item)=> {
+	item.addEventListener('click', (e)=> {
+		if (e.target.className === 'loan__detail-close') {
+			e.target.parentElement.classList.remove('active')
+		} else {
+			item.querySelector('.loan__detail').classList.add('active')
+		}
+	
+	})
+})
+
+
+
+
+
+
+
+
+
+
 
 
 
