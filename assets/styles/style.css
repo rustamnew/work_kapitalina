@@ -594,6 +594,20 @@ a {
   z-index: 10;
 }
 
+.step .sidebar {
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: 1 / 1 / 12 / 2;
+  max-height: 100vh;
+  z-index: 10;
+}
+
 .step .header {
   grid-area: 1 / 2 / 2 / 12;
 }
@@ -1169,6 +1183,10 @@ input[type=range].step__input::-moz-range-thumb {
     display: none;
   }
 
+  .step .sidebar {
+    display: none;
+  }
+
   .step__main {
     width: 100%;
     grid-area: 2 / 1 / 12 / 12;
@@ -1449,6 +1467,7 @@ input[type=range].step__input::-moz-range-thumb {
     flex-direction: column;
     align-items: flex-end;
     padding: 10px 25px;
+    background-color: #fff;
   }
 }
 /*Кружок в сайдбаре*/
@@ -2607,18 +2626,18 @@ select[data-ss-uuid] {
   text-decoration-line: underline;
 }
 
-.sidebar__vip {
+.sidebar__greetings {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 70px;
 }
 
-.sidebar__vip img {
+.sidebar__greetings img {
   margin-bottom: 18px;
 }
 
-.sidebar__vip span {
+.sidebar__greetings span {
   font-weight: 700;
   font-size: 24px;
 }
@@ -2690,7 +2709,7 @@ select[data-ss-uuid] {
     color: #F98600;
   }
 
-  .sidebar__vip {
+  .sidebar__greetings {
     margin-bottom: 20px;
   }
 }
@@ -2922,6 +2941,10 @@ select[data-ss-uuid] {
     min-width: 0;
   }
 }
+.history {
+  margin-bottom: 40px;
+}
+
 .history__expand {
   width: 100%;
   border: none;

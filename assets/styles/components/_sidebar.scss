@@ -45,16 +45,16 @@
     margin-top: 15px;
     text-decoration-line: underline;
 }
-.sidebar__vip {
+.sidebar__greetings {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 70px;
 }
-.sidebar__vip img {
+.sidebar__greetings img {
     margin-bottom: 18px;
 }
-.sidebar__vip span {
+.sidebar__greetings span {
     font-weight: 700;
     font-size: 24px;
 }
@@ -124,7 +124,7 @@
         background: #FFFFFF;
         color: $orange;
     }
-    .sidebar__vip {
+    .sidebar__greetings {
         margin-bottom: 20px;
     }
 }

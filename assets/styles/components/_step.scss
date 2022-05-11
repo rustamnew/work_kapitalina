@@ -22,6 +22,21 @@
     z-index: 10;
 }
 
+.step .sidebar {
+    background-image: url(../img/background.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    grid-area: 1 / 1 / 12 / 2;
+    max-height: 100vh;
+    z-index: 10;
+}
+
 .step .header {
     grid-area: 1 / 2 / 2 / 12;
 }
@@ -601,6 +616,9 @@ input[type=range].step__input::-moz-range-thumb {
     .step__sidebar {
         display: none;
     }
+    .step .sidebar {
+        display: none;
+    }
     .step__main {
         width: 100%;
         
@@ -850,6 +868,7 @@ input[type=range].step__input::-moz-range-thumb {
         flex-direction: column;
         align-items: flex-end;
         padding: 10px 25px;
+        background-color: #fff;
     }
     
 }
