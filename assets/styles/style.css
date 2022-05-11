@@ -3410,3 +3410,152 @@ select[data-ss-uuid] {
     font-size: 14px;
   }
 }
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal__popup {
+  background: #FFFFFF;
+  box-shadow: 0px 35px 100px rgba(39, 52, 165, 0.06);
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 115px;
+  max-width: 42%;
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal__title {
+  font-weight: 700;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.modal__subtitle {
+  margin-bottom: 70px;
+  text-align: center;
+}
+.modal__subtitle b {
+  white-space: nowrap;
+}
+
+.modal__icon {
+  margin-bottom: 28px;
+}
+
+.modal input[type=text] {
+  margin-bottom: 40px;
+  border: none;
+  color: #313131;
+  border-bottom: 1px solid #313131;
+  width: 100%;
+  padding: 0 0 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+}
+
+.modal input.short {
+  width: unset;
+  padding-bottom: 4px;
+  font-size: 36px;
+  font-weight: 400;
+}
+.modal input.short::placeholder {
+  color: #BBB9B9;
+}
+
+.modal label {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.modal label a {
+  text-decoration: underline;
+}
+
+.modal.phone .modal__popup {
+  max-width: 465px;
+  padding: 74px 50px 36px;
+}
+.modal.phone .modal__popup input {
+  margin-bottom: 16px;
+}
+
+.modal__resend {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modal__resend span {
+  color: #F98600;
+  white-space: nowrap;
+}
+.modal__resend a {
+  color: #F98600;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.modal__terms {
+  width: 100%;
+  margin-top: 33px;
+}
+.modal__terms li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.modal__terms li:last-child {
+  margin-bottom: 0;
+}
+.modal__terms li input[type=checkbox] {
+  margin-right: 10px;
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .modal__popup {
+    padding: 70px 24px;
+    width: 90%;
+    max-height: 98%;
+    max-width: unset;
+  }
+
+  .modal__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  .modal__subtitle {
+    margin-bottom: 26px;
+  }
+
+  .modal.phone .modal__popup {
+    padding: 65px 24px 34px;
+  }
+}

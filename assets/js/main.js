@@ -116,6 +116,24 @@ loanOpenButtons.forEach((item)=> {
 
 
 
+//подстраивание размера инпута под placeholder
+let modalInput = document.querySelectorAll('.modal__input.short');
+
+modalInput.forEach((item) => {
+	item.setAttribute('size',item.getAttribute('placeholder').length);
+})
+
+
+/*Закрытие модального окна */
+
+let modalClose = document.querySelectorAll('.modal__close');
+modalClose.forEach((item) => {
+	item.addEventListener('click', (e) => {
+		item.parentElement.parentElement.classList.remove('active')
+	})
+})
+
+
 
 
 
