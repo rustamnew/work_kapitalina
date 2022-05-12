@@ -118,10 +118,18 @@ loanOpenButtons.forEach((item)=> {
 
 //подстраивание размера инпута под placeholder
 let modalInput = document.querySelectorAll('.modal__input.short');
-
 modalInput.forEach((item) => {
 	item.setAttribute('size',item.getAttribute('placeholder').length);
 })
+
+//подстраивание размера инпута под placeholder auth
+let authInput = document.querySelectorAll('.auth__panel-input');
+authInput.forEach((item) => {
+	item.setAttribute('size',item.getAttribute('placeholder').length);
+})
+
+
+
 
 
 /*Закрытие модального окна */

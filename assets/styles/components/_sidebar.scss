@@ -126,6 +126,10 @@
     }
     .sidebar__greetings {
         margin-bottom: 20px;
+
+        &.bad span {
+            display: none;
+        }
     }
 }
 

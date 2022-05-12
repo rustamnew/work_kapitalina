@@ -29,9 +29,15 @@
 
     width: 40%;
     min-width: 420px;
-    max-width: 600px;
-}
+    max-width: 485px;
 
+    position: relative;
+}
+.auth__panel-back {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
 .auth__panel-title {
     font-weight: 700;
     font-size: 30px;
@@ -114,5 +120,8 @@
     .auth__panel-check {
         width: 110%;
         justify-content: center;
+    }
+    .auth__panel-back {
+        position: fixed;
     }
 }

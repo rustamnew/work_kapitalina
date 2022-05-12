@@ -380,7 +380,14 @@ a {
   align-items: center;
   width: 40%;
   min-width: 420px;
-  max-width: 600px;
+  max-width: 485px;
+  position: relative;
+}
+
+.auth__panel-back {
+  position: absolute;
+  top: 30px;
+  left: 30px;
 }
 
 .auth__panel-title {
@@ -469,6 +476,10 @@ a {
   .auth__panel-check {
     width: 110%;
     justify-content: center;
+  }
+
+  .auth__panel-back {
+    position: fixed;
   }
 }
 .header {
@@ -592,6 +603,7 @@ a {
   grid-area: 1 / 1 / 12 / 2;
   max-height: 100vh;
   z-index: 10;
+  min-height: 315px;
 }
 
 .step .sidebar {
@@ -1116,6 +1128,16 @@ li.step__photo label img {
   margin-bottom: 20px;
 }
 
+.step__payment-tab-change {
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration-line: underline;
+  color: #BBB9B9;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 input[type=date].step__input::-webkit-datetime-edit {
   color: #ABABAB;
 }
@@ -1468,6 +1490,10 @@ input[type=range].step__input::-moz-range-thumb {
     align-items: flex-end;
     padding: 10px 25px;
     background-color: #fff;
+  }
+
+  .step__payment-tab-change {
+    display: none;
   }
 }
 /*Кружок в сайдбаре*/
@@ -2304,7 +2330,7 @@ select[data-ss-uuid] {
   border: 1px solid #d0d0d0;
   border: none;
   width: 100%;
-  color: #ABABAB;
+  color: #313131;
   border-bottom: 1px solid rgba(34, 27, 27, 0.31);
   padding: 20px;
 }
@@ -2712,6 +2738,9 @@ select[data-ss-uuid] {
   .sidebar__greetings {
     margin-bottom: 20px;
   }
+  .sidebar__greetings.bad span {
+    display: none;
+  }
 }
 @-webkit-keyframes rotating {
   from {
@@ -2763,6 +2792,14 @@ select[data-ss-uuid] {
   -ms-animation: rotating 2s linear infinite;
   -o-animation: rotating 2s linear infinite;
   animation: rotating 2s linear infinite;
+}
+
+.timer__icon.static img {
+  -webkit-animation: unset;
+  -moz-animation: unset;
+  -ms-animation: unset;
+  -o-animation: unset;
+  animation: unset;
 }
 
 .timer__value {
@@ -2872,6 +2909,7 @@ select[data-ss-uuid] {
   font-weight: 700;
   font-size: 22px;
   margin-bottom: 10px;
+  line-height: 1.27;
 }
 
 .about__text {

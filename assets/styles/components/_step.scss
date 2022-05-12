@@ -20,6 +20,7 @@
     grid-area: 1 / 1 / 12 / 2;
     max-height: 100vh;
     z-index: 10;
+    min-height: 315px;
 }
 
 .step .sidebar {
@@ -543,7 +544,15 @@ li.step__photo label img{
     margin-bottom: 20px;
 }
 
-
+.step__payment-tab-change {
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration-line: underline;
+    color: $lightgray;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
 
 
 
@@ -870,7 +879,9 @@ input[type=range].step__input::-moz-range-thumb {
         padding: 10px 25px;
         background-color: #fff;
     }
-    
+    .step__payment-tab-change {
+        display: none;
+    }
 }
 
 
@@ -1100,7 +1111,8 @@ select[data-ss-uuid] {
       border: 1px solid #d0d0d0; 
       border: none;
       width: 100%;
-      color: #ABABAB;
+      //color: #ABABAB;
+      color: $darkgray;
       border-bottom: 1px solid rgba(34, 27, 27, 0.31);
       padding: 20px; 
 }

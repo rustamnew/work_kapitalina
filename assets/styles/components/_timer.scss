@@ -54,6 +54,13 @@
     -o-animation: rotating 2s linear infinite;
     animation: rotating 2s linear infinite;
 }
+.timer__icon.static img{
+    -webkit-animation: unset;
+    -moz-animation: unset;
+    -ms-animation: unset;
+    -o-animation: unset;
+    animation: unset;
+}
 
 .timer__value {
     
