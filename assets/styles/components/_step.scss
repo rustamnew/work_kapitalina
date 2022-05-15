@@ -3,9 +3,23 @@
     height: 100%;
     //overflow: auto;
     display: flex;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    
+    max-height: 100vh;
+
+    .page-content {
+        padding-bottom: 0;
+    }
 }
-
-
+/*
+.step {
+    max-height: 100vh;
+}
+*/
+.step .page-content {
+    padding-bottom: 0;
+}
 
 .step__sidebar {
     background-image: url(../img/background.png);
@@ -115,6 +129,7 @@
 .step__inputs li input:focus + label {
     //display: initial;
     opacity: 1;
+    color: #464646;
 }
 
 
@@ -145,7 +160,7 @@ li.step__radio input{
     height: 28px;
 }
 li.step__radio span {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 li.step__radio label {
     display: flex;
@@ -163,8 +178,8 @@ li.step__radio label {
 li.step__radio label::before {
     content: '';
     display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
+    width: 28px;
+    height: 28px;
     -ms-flex-negative: 0;
     flex-shrink: 0;
     -webkit-box-flex: 0;
@@ -322,13 +337,20 @@ li.step__photo label img{
 .step__input {
     border: none;
     width: 100%;
-    color: $inputgray;
+    color: $darkgray;
     border-bottom: 1px solid rgba(34, 27, 27, 0.31);
     padding: 20px;
 
+    //костыль чтоб инпуты не скакали когда тыкаешь на них (input date)
+    max-height: 59.39px;
+    //
 
     &::placeholder {
         color: $inputgray;
+    }
+
+    &:focus {
+        border-color: $orange;
     }
 }
 
@@ -444,9 +466,7 @@ li.step__photo label img{
 .step__payment-tab.active {
     display: initial;   
 }
-.step__payment-tab-card {
 
-}
 .step__input.card {
     border: 1.5px solid #D5D5D5;
     border-radius: 10px;
@@ -557,15 +577,18 @@ li.step__photo label img{
 
 
 
-
-
-
-
-
-
-input[type=date].step__input::-webkit-datetime-edit {
-    color: $inputgray;
+.step__inputs li.step__radio label {
+    font-size: 16px;
 }
+
+
+
+
+/*
+input[type=date].step__input::-webkit-datetime-edit {
+    color: unset;
+}
+*/
 input[type=date].step__input::-webkit-calendar-picker-indicator {
     cursor: pointer;
     background-image: url(../img/icons/calendar.svg);
@@ -662,6 +685,9 @@ input[type=range].step__input::-moz-range-thumb {
         width: 100%;
         margin-bottom: 10px;
     }
+    .step__inputs li.step__radio label {
+        color: $darkgray;
+    }
     .step__inputs .step__terms {
         align-items: flex-start;
     }
@@ -671,6 +697,9 @@ input[type=range].step__input::-moz-range-thumb {
     .step__inputs .step__terms .step__input {
         margin-top: 5px;
         margin-right: 7px;
+    }
+    .step__inputs li label {
+        left: 0;
     }
     .step__controls {
         background-color: #FFF;

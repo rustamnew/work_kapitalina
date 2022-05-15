@@ -4,14 +4,14 @@ let stepPhotoDetailClose = document.querySelectorAll('.step__photo-content-close
 
 if(stepPhotoDetailButtons && stepPhotoDetailClose) {
 	stepPhotoDetailButtons.forEach((e) => {
-		e.addEventListener('click', (event) => {
+		e.addEventListener('click', () => {
 			e.parentElement.parentElement.querySelector('.step__photo-content-info').classList.add('active');
 		})
 		
 	})
 
 	stepPhotoDetailClose.forEach((e) => {
-		e.addEventListener('click', (event) => {
+		e.addEventListener('click', () => {
 			e.parentElement.classList.remove('active')
 		})
 	})
@@ -98,8 +98,8 @@ if(historyExpandButton) {
 
 /* Открытие детальной информации о займе profile-loans */
 
-loanOpenButtons = document.querySelectorAll('.loan__item');
-loanCloseButtons = document.querySelectorAll('.loan__detail-close');
+let loanOpenButtons = document.querySelectorAll('.loan__item');
+//let loanCloseButtons = document.querySelectorAll('.loan__detail-close');
 
 
 loanOpenButtons.forEach((item)=> {
@@ -136,13 +136,20 @@ authInput.forEach((item) => {
 
 let modalClose = document.querySelectorAll('.modal__close');
 modalClose.forEach((item) => {
-	item.addEventListener('click', (e) => {
+	item.addEventListener('click', () => {
 		item.parentElement.parentElement.classList.remove('active')
 	})
 })
 
 
-
+/*Input date, чтоб был placeholder и по клику открывалось окно выбора даты */
+let dateInputs = document.querySelectorAll('.date-input');
+dateInputs.forEach((e)=> {
+	e.addEventListener('focus', ()=> {
+		e.type='date';
+		e.showPicker();
+	})
+})
 
 
 
@@ -178,7 +185,7 @@ function handleFileSelect(evt) {
     }
     var reader = new FileReader();
     // Closure to capture the file information.
-    reader.onload = (function(theFile) {
+    reader.onload = (function(/*theFile*/) {
         return function(e) {
             // Render thumbnail.
             var img = document.createElement('img');
@@ -456,7 +463,7 @@ photoInputs.forEach((e) => {
             styleSelectOption.addEventListener('click', function(ev) {
 				var target = ev.target,
 					styledSelectBox = target.parentNode.parentNode,
-					uuid = styledSelectBox.getAttribute('data-ss-uuid'),
+					/*uuid = styledSelectBox.getAttribute('data-ss-uuid'),*/
 					newValue = target.getAttribute('data-value'),
 					newLabel = target.textContent;
 
@@ -580,7 +587,7 @@ photoInputs.forEach((e) => {
 /*Инициализация кастомного селекта*/
 let selects = document.querySelectorAll('.step__input.select')
 selects.forEach((e) => {
-    id = '#' + e.id
+    let id = '#' + e.id
     styleSelect(id)
 })
 
